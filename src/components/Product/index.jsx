@@ -1,21 +1,81 @@
 import React from 'react'
 
-import ProductStyled from './style'
-import pantalonesDeCuero from '../../assets/images/pantalones-de-cuero.jpg'
+import DeleteProduct from '../DeleteProduct/index'
 
-const Product = () => (
-    <ProductStyled className="col-4">
-        <div className="Product">
-            <div className="Product__background">
-                <img className="Product__img" src={pantalonesDeCuero} alt="Pantalones de cuero"/>
+const Product = ({
+    classCol, 
+    classProduct, 
+    classBackground, 
+    classImg, 
+    img,
+    alt,
+    classInfo, 
+    className, 
+    classTitle,
+    textTitle,
+    classDescription,
+    classText,
+    text,
+    classPrice, 
+    classNumber,
+    textNumber,
+    classSubmit,
+    classButton,
+    textButton,
+    classOnclick,
+    productFunction,
+    isOpen,
+    isClose,
+    stateModal,
+    classMessage,
+    classQuestion,
+    textQuestion,
+    classAffirmation,
+    textAffirmation,
+    classActions, 
+    classBtnCancel,
+    textBtnCancel,
+    classBtnFunction,
+    textBtnFunction,
+}) => 
+    (
+    <div className={classCol}>
+        <div className={classProduct}>
+            <div className={classBackground}>
+                <img className={classImg} src={img} alt={alt}></img>
             </div>
-            <div className="Product__info">
-                <h2 className="Product__title">Pantalon de cuero</h2>
-                <p className="Product__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sequi! Solutaiure eum et, incidunt voluptatum placeat iste autem ratione rem saepe cum illum fugiat facere aliquid ullamquas deleniti.</p>
-                <span className="Product__span">El span hermano</span>
+            <div className={classInfo}>
+                <div className={className}>
+                    <h2 className={classTitle}>{textTitle}</h2>
+                </div>
+                <div className={classDescription}>
+                    <p className={classText}>{text}</p>
+                </div>
+                <div className={classPrice}>
+                    <span className={classNumber}>{textNumber}</span>
+                </div>
+                <div className={classSubmit}>
+                    <button onClick={classOnclick} className={classButton}>{textButton}</button>
+                    {productFunction === 'delete' && 
+                    <DeleteProduct 
+                    isOpen={isOpen} 
+                    stateModal={stateModal} 
+                    isClose={isClose}
+                    classMessage={classMessage}
+                    classQuestion = {classQuestion}
+                    textQuestion = {textQuestion}
+                    classAffirmation = {classAffirmation}
+                    textAffirmation = {textAffirmation}
+                    classActions = {classActions}
+                    classBtnCancel = {classBtnCancel}
+                    textBtnCancel = {textBtnCancel}
+                    classBtnFunction = {classBtnFunction}
+                    textBtnFunction = {textBtnFunction}/>
+                    }
+                </div>
             </div>
-        </div>
-    </ProductStyled>
+        </div>   
+    </div>
 )
 
 

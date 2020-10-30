@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
 
-import Product from '../components/Product/index'
+import Filter from '../components/Filter/index'
+import ProductsView from '../components/ProductsView/index'
 
 class Products extends Component {
     render(){
         return(
-            <div className="container">
-                <div className="row">
-                    <Product></Product>
-                </div>
-            </div>
+            <>
+            <Filter></Filter>
+            <ProductsView></ProductsView>
+            </>
         )
     }
 }
