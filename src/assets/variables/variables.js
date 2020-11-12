@@ -27,6 +27,13 @@ const variables = {
         medium_1:"14px",
         medium_2:"15px",
         max:"16px",
+    },
+
+    mediaQueries:{
+        phone_min: "320px",
+        phone_max: "480px",
+        tablet:"768px",
+        desktop: "1024px",
     }
 }
 

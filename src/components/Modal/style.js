@@ -18,10 +18,18 @@ const ModalStyled = styled.div `
         background:white;
         border-radius:10px;
         padding:20px;
-        width:400px;
+        max-width:350px;
+        width:100%;
+        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+            width:80%;
+        }
+        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
+            width:80%;
+        }
+        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+            width:80%;
+        }
     }
-
-
 `
 
 export default ModalStyled

@@ -5,7 +5,9 @@ import DeleteProductStyled from './style'
 
 
 const DeleteProduct = ({
+    identify,
     isClose,
+    handleDeleteToCart,
     stateModal,
     classMessage,
     classQuestion,
@@ -25,7 +27,7 @@ const DeleteProduct = ({
                 <p className={classAffirmation}>{textAffirmation}</p>
             </div>
             <div className={classActions}>
-                <button className={classBtnFunction}>{textBtnFunction}</button>
+                <button onClick={() => handleDeleteToCart(identify)} className={classBtnFunction}>{textBtnFunction}</button>
                 <button onClick={isClose} className={classBtnCancel}>{textBtnCancel}</button>
             </div>
         </DeleteProductStyled>

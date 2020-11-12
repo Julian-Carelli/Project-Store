@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 
 import Account from '../components/Account/index'
+import {deleteToCart, confirmBuy} from '../store/actions/cartActions'
 
 class Cart extends Component {
     constructor(props){
@@ -8,6 +10,24 @@ class Cart extends Component {
         this.state = {
             modalIsOpen: false
         }
+    }
+
+    handleDeleteToCart = (key) => {
+        const id = key;
+        this.props.deleteToCart(id)
+    }
+
+    handlePriceTotal = () => {
+        let total = 0;
+        this.props.cartReducer.cart.map((element => (
+            total += element.price
+        )))
+        return total
+    }
+
+    handleConfirmBuy = () => {
+        this.props.confirmBuy()
+        this.props.history.push('/')
     }
 
     handleOnOpenModal = e => {
@@ -21,13 +41,28 @@ class Cart extends Component {
 
     render(){
         return(
-            <Account 
+            <Account
                 isOpen={this.handleOnOpenModal} 
                 stateModal={this.state.modalIsOpen} 
-                isClose={this.handleOnCloseModal}>
+                isClose={this.handleOnCloseModal}
+                handleDeleteToCart={this.handleDeleteToCart}
+                handlePriceTotal={this.handlePriceTotal}
+                handleConfirmBuy={this.handleConfirmBuy}
+                user={this.props.userReducer.user}
+                cart={this.props.cartReducer.cart}>
             </Account>
         )
     }
 }
 
-export default Cart 
+const mapStateToProps = ({userReducer, cartReducer}) => ({
+    userReducer,
+    cartReducer,
+})
+
+const mapDispatchToPros = {
+    deleteToCart,
+    confirmBuy
+}
+
+export default connect(mapStateToProps, mapDispatchToPros)(Cart) 

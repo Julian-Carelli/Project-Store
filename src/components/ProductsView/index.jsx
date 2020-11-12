@@ -1,101 +1,66 @@
 import React from 'react'
 
 import Product from '../Product/index'
+import Redirection from '../Redirection/index'
+
 import ProductsViewStyled from './style'
-import ropa_1 from '../../assets/images/ropa1.jpg'
 
-const ProductsView = () => (
-    <ProductsViewStyled>
-        <div className="ProductsView container-fluid">
-            <div className="ProductsView__row row">
-                    <Product
-                        classCol="ProductsView-product col-3"
-                        classProduct="ProductsView-product__card"
-                        classBackground="ProductsView-product__background"
-                        classImg="ProductsView-product__img"
-                        img={ropa_1}
-                        alt="Ropa 1"
-                        classInfo="ProductsView-product__info"
-                        className="ProductsView-product__name"
-                        classTitle="ProductsView-product__title"
-                        textTitle="producto 1"
-                        classDescription="ProductsView-product__description"
-                        classText="ProductsView-product__text"
-                        text="Lorem ipsum dolor sit amet, sir le pasiui moshle"
-                        classPrice="ProductsView-product__Price"
-                        classNumber="ProductsView-product__Number"
-                        textNumber="$ 1990"
-                        classSubmit="ProductsView-product__submit"
-                        classButton="ProductsView-product__button btn btn-primary"
-                        textButton="Agregar al carrito"
-                    />
-                    <Product
-                        classCol="ProductsView-product col-3"
-                        classProduct="ProductsView-product__card"
-                        classBackground="ProductsView-product__background"
-                        classImg="ProductsView-product__img"
-                        img={ropa_1}
-                        alt="Ropa 2"
-                        classInfo="ProductsView-product__info"
-                        className="ProductsView-product__name"
-                        classTitle="ProductsView-product__title"
-                        textTitle="producto 2"
-                        classDescription="ProductsView-product__description"
-                        classText="ProductsView-product__text"
-                        text="Lorem ipsum dolor sit amet, sir le pasiui moshle"
-                        classPrice="ProductsView-product__Price"
-                        classNumber="ProductsView-product__Number"
-                        textNumber="$ 1990"
-                        classSubmit="ProductsView-product__submit"
-                        classButton="ProductsView-product__button btn btn-primary"
-                        textButton="Agregar al carrito"
-                    />
+const ProductsView = ({user, products, handleAddToCart}) => (
+    (user.email 
 
-                    <Product
-                        classCol="ProductsView-product col-3"
-                        classProduct="ProductsView-product__card"
-                        classBackground="ProductsView-product__background"
-                        classImg="ProductsView-product__img"
-                        img={ropa_1}
-                        alt="Ropa 3"
-                        classInfo="ProductsView-product__info"
-                        className="ProductsView-product__name"
-                        classTitle="ProductsView-product__title"
-                        textTitle="producto 1"
-                        classDescription="ProductsView-product__description"
-                        classText="ProductsView-product__text"
-                        text="Lorem ipsum dolor sit amet, sir le pasiui moshle"
-                        classPrice="ProductsView-product__Price"
-                        classNumber="ProductsView-product__Number"
-                        textNumber="$ 1990"
-                        classSubmit="ProductsView-product__submit"
-                        classButton="ProductsView-product__button btn btn-primary"
-                        textButton="Agregar al carrito"
-                    />
-                    <Product
-                        classCol="ProductsView-product col-3"
-                        classProduct="ProductsView-product__card"
-                        classBackground="ProductsView-product__background"
-                        classImg="ProductsView-product__img"
-                        img={ropa_1}
-                        alt="Ropa 4"
-                        classInfo="ProductsView-product__info"
-                        className="ProductsView-product__name"
-                        classTitle="ProductsView-product__title"
-                        textTitle="producto 2"
-                        classDescription="ProductsView-product__description"
-                        classText="ProductsView-product__text"
-                        text="Lorem ipsum dolor sit amet, sir le pasiui moshle"
-                        classPrice="ProductsView-product__Price"
-                        classNumber="ProductsView-product__Number"
-                        textNumber="$ 1990"
-                        classSubmit="ProductsView-product__submit"
-                        classButton="ProductsView-product__button btn btn-primary"
-                        textButton="Agregar al carrito"
-                    />    
-            </div>
-        </div>
-    </ProductsViewStyled>
+        ?   <ProductsViewStyled>
+                <div className="ProductsView container-fluid">
+                    <div id="Products" className="ProductsView__row row">
+                        {products.map((product => 
+                            <Product key={product.id}
+                            classCol="ProductsView-product col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3"
+                            classProduct="ProductsView-product__card"
+                            classBackground="ProductsView-product__background"
+                            classImg="ProductsView-product__img"
+                            img={product.img}
+                            alt="Ropa 1"
+                            classInfo="ProductsView-product__info"
+                            className="ProductsView-product__content"
+                            classTitle="ProductsView-product__title"
+                            textTitle={product.name}
+                            classDescription="ProductsView-product__content"
+                            classText="ProductsView-product__text"
+                            text={product.description}
+                            classPrice="ProductsView-product__content"
+                            classNumber="ProductsView-product__number"
+                            textNumber={product.price}
+                            classSubmit="ProductsView-product__content"
+                            classOnclick={() => handleAddToCart(product.id)}
+                            classButton="ProductsView-product__button btn btn-primary"
+                            textButton="Agregar al carrito"
+                            />
+                        ))}
+                    </div>
+                    { products.length === 0 && 
+                    <div className="ProductsView__row row">
+                        <div className="ProductsView-expected col-12">
+                            <div className="ProductsView-expected__name">
+                                <h2 className="ProductsView-expected__title">No encontramos lo que estas buscando</h2>
+                            </div>
+                            <div className="ProductsView-expected__info">
+                                <p className="ProductsView-expected__text">
+                                    Recuerda usar las palabras claves como <strong> t-shirt</strong>, <strong>shoes</strong> y <strong>coat</strong> para obtener los resultados que buscas
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    }
+                </div>
+                
+
+            </ProductsViewStyled>
+        
+        :   <Redirection
+            text="Para acceder a los productos de la tienda, necesitas tener una sesión
+            iniciada"
+            />
+    )
 )
 
 export default ProductsView

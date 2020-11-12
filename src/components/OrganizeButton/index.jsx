@@ -1,9 +1,9 @@
 import React from 'react'
 
-const OrganizeButton = ({classCol, classContain, classButton, text}) => (
+const OrganizeButton = ({classCol, classContain, handleFilterButton, classButton, text}) => (
     <div className={classCol}>
         <div className={classContain}>
-            <button className={classButton}>{text}</button>
+            <button onClick={handleFilterButton} className={classButton}>{text}</button>
         </div>
     </div>
 )

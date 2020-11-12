@@ -3,6 +3,7 @@ import React from 'react'
 import DeleteProduct from '../DeleteProduct/index'
 
 const Product = ({
+    identify,
     classCol, 
     classProduct, 
     classBackground, 
@@ -26,6 +27,7 @@ const Product = ({
     productFunction,
     isOpen,
     isClose,
+    handleDeleteToCart,
     stateModal,
     classMessage,
     classQuestion,
@@ -52,15 +54,17 @@ const Product = ({
                     <p className={classText}>{text}</p>
                 </div>
                 <div className={classPrice}>
-                    <span className={classNumber}>{textNumber}</span>
+                    <span className={classNumber}>${textNumber}</span>
                 </div>
                 <div className={classSubmit}>
                     <button onClick={classOnclick} className={classButton}>{textButton}</button>
                     {productFunction === 'delete' && 
-                    <DeleteProduct 
+                    <DeleteProduct
+                    identify={identify}
                     isOpen={isOpen} 
                     stateModal={stateModal} 
                     isClose={isClose}
+                    handleDeleteToCart={handleDeleteToCart}
                     classMessage={classMessage}
                     classQuestion = {classQuestion}
                     textQuestion = {textQuestion}

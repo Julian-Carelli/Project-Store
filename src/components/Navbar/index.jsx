@@ -1,10 +1,19 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux';
+
+import {deleteUser} from '../../store/actions/userActions'
 
 import Header from './style'
 import Logo from '../../assets/images/logo.png'
 
 class Navbar extends Component{
+    
+    signOut = () => {
+        this.props.deleteUser()
+    }
+
+
     render(){
         return(
             <Header>
@@ -17,16 +26,46 @@ class Navbar extends Component{
                     </div>
                     <div className="Navbar-cart">
                         <ul className="Navbar-cart__menu">
-                            <li className="Navbar-cart__user"><p className="Navbar-cart__text">Usuario</p>
+                            <li className="Navbar-cart__user">
+                                {this.props.userReducer.user.email && this.props.userReducer.user.username
+                                    ?   <p className="Navbar-cart__text">{this.props.userReducer.user.username}</p>
+                
+                                    :   <p className="Navbar-cart__text">Usuario</p>
+                                }
+                                
                                 <ul className="Navbar-cart__link">
-                                    <li className="Navbar-cart__login"><Link to="/login"><p className="Navbar-cart__span">Iniciar sesión</p></Link></li>
-                                    <li className="Navbar-cart__register"><Link to="/register"><p className="Navbar-cart__span">Registrarse</p></Link></li>
+                                    {this.props.userReducer.user.email && this.props.userReducer.user.username
+
+                                        ?   
+
+                                            <li className="Navbar-cart__login">
+                                                <Link to="/login">
+                                                    <p className="Navbar-cart__span" onClick={() => this.signOut()}>
+                                                        Cerrar sesión
+                                                    </p>
+                                                </Link>
+                                            </li>
+                                        
+                                        :   
+                                            <>
+                                            <li className="Navbar-cart__login"><Link to="/login"><p className="Navbar-cart__span">Iniciar sesión</p></Link></li>
+                                            <li className="Navbar-cart__register"><Link to="/register"><p className="Navbar-cart__span">Registrarse</p></Link></li>
+                                            </>
+                                    }
+                                    
+
                                 </ul>
                             </li>
                         </ul>
                         <Link to="/cart">
                             <i className="Navbar-cart__icon fas fa-shopping-cart"></i>
                         </Link>
+                        {this.props.userReducer.user.email && (
+                            <div className="Navbar-cart__count">
+                                <span className="Navbar-cart__number">{this.props.cartReducer.cart.length}</span>
+                            </div>
+                        )}
+                        
                     </div>
                 </div>
             </Header>
@@ -34,4 +73,13 @@ class Navbar extends Component{
     }
 }
 
-export default Navbar
+const mapStateToProps = ({userReducer, cartReducer}) => ({
+    userReducer,
+    cartReducer,
+});
+
+const mapDispatchToProps = {
+    deleteUser
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
