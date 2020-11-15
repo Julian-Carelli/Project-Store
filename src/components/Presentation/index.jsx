@@ -1,12 +1,13 @@
 import React from 'react'
 
+import Figure from '../Figure/index'
+
 import PresentationStyled from './style'
 import Ropa_1 from '../../assets/images/ropa1.jpg'
 import Ropa_2 from '../../assets/images/ropa2.jpg'
 import Ropa_3 from '../../assets/images/ropa3.jpg'
 import Ropa_4 from '../../assets/images/ropa4.jpg'
 import Ropa_5 from '../../assets/images/ropa5.jpg'
-import Figure from '../Figure/index'
 
 
 const Presentation = ({user, userCreated}) => (

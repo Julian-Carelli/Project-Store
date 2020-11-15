@@ -7,16 +7,7 @@ const FormRegisterStyled = styled.div `
         justify-content:center;
         line-height:50px;
         width:100%;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            line-height:45px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            line-height:45px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            line-height:45px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+        @media screen and (max-width:1024px) and (min-width:0px){
             line-height:45px;
         }
     }
@@ -47,16 +38,10 @@ const FormRegisterStyled = styled.div `
     .Register-form__title {
         font-size:${props => props.theme.fontSizeTitle.max};
         font-weight:${props => props.theme.fontWeight.bold};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width:480px) and (min-width:0px){
             font-size:${props => props.theme.fontSizeTitle.min};
         }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:${props => props.theme.fontSizeTitle.min};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:${props => props.theme.fontSizeTitle.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+        @media screen and (max-width:1024px) and (min-width:480px){
             font-size:${props => props.theme.fontSizeTitle.medium};
         }
     }
@@ -97,23 +82,15 @@ const FormRegisterStyled = styled.div `
         padding:20px 0px;
         line-height:18px;
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            display:flex;
-            align-items:baseline;
             font-size:11px;
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            display:flex;
-            align-items:baseline;
             font-size:12px;
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            display:flex;
-            align-items:baseline;
             font-size:13px;
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            display:flex;
-            align-items:baseline;
             font-size:14px;
         }
     }
@@ -138,15 +115,11 @@ const FormRegisterStyled = styled.div `
         font-size:${props => props.theme.fontSizeText.min};
         font-weight:${props => props.theme.fontWeight.regular};
         line-height:25px;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            line-height:15px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
+        @media screen and (max-width: 480px) and (min-width:0px){
             line-height:15px;
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
             line-height:20px;
-
         }
     }
 

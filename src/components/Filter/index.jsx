@@ -9,7 +9,7 @@ const Filter = ({user,filter, handleFilterButton, handleFilterAll, handleFilterS
             ?  <FilterStyled>
                     <div className="Filter container-fluid">
                         <div className="Filter__row row">
-                            <div className="Filter__name col-12">
+                            <div className="Filter__name col-6">
                                 <h2 className="Filter__title">Catálogo</h2>
                             </div>
                         </div>
@@ -24,21 +24,21 @@ const Filter = ({user,filter, handleFilterButton, handleFilterAll, handleFilterS
                             <OrganizeButton
                                 classCol="Filter-organizeButton col-3"
                                 classContain="Filter-organizeButton__contain"
-                                handleFilterButton={() => handleFilterButton('t-shirt')}
+                                handleFilterButton={() => handleFilterButton('remeras')}
                                 classButton="Filter-organizeButton__button btn btn-primary"
                                 text="Remeras">
                             </OrganizeButton>
                             <OrganizeButton
                                 classCol="Filter-organizeButton col-3"
                                 classContain="Filter-organizeButton__contain"
-                                handleFilterButton={() => handleFilterButton('shoes')}
+                                handleFilterButton={() => handleFilterButton('zapatillas')}
                                 classButton="Filter-organizeButton__button btn btn-primary"
-                                text="Calzado">
+                                text="Zapatillas">
                             </OrganizeButton>
                             <OrganizeButton
                                 classCol="Filter-organizeButton col-3"
                                 classContain="Filter-organizeButton__contain"
-                                handleFilterButton={() => handleFilterButton('coat')}
+                                handleFilterButton={() => handleFilterButton('abrigos')}
                                 classButton="Filter-organizeButton__button btn btn-primary"
                                 text="Abrigos">
                             </OrganizeButton>
@@ -46,7 +46,7 @@ const Filter = ({user,filter, handleFilterButton, handleFilterAll, handleFilterS
                         <div className="Filter__filter row">
                             <div className="Filter__search col-12">
                                 <input onChange={handleFilterSearch} value={filter} className="Filter__input form-group" placeholder="Buscar por categoria ejemplo 
-                                't-shirt', 'shoes', 'coat'"></input>
+                                'remeras', 'zapatillas', 'abrigos'"></input>
                             </div>
                         </div>
                     </div>

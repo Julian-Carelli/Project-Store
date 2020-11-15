@@ -11,7 +11,7 @@ import Ropa_3 from '../../assets/images/ropa3.jpg'
 import Ropa_4 from '../../assets/images/ropa4.jpg'
 import Ropa_5 from '../../assets/images/ropa5.jpg'
 
-const FormLogin = ({error,data, handleOnChange, userLogin}) => (
+const FormLogin = ({error, handleOnChange, userLogin}) => (
     <LoginStyled>
         <div className="Login container-fluid">
             <div className="Login__row row">
@@ -36,11 +36,11 @@ const FormLogin = ({error,data, handleOnChange, userLogin}) => (
                             <label className="Login-form__label-checkbox">Recordar contraseña</label>
                         </div>
 
-                        {error === 'error' && (
-                            <div className="Login-form__error">
-                                <Error classText="text-danger" text="La cuenta o la contraseña es incorrecta. Porfavor ingrese nuevamente los datos"/>
-                            </div>
-                        )}
+                        <div className="Login-form__error">
+                            {error === 'error' && (
+                                <Error classText="Login-form__text text-danger" text="La cuenta o la contraseña es incorrecta. Porfavor ingrese nuevamente los datos"/>  
+                            )}
+                        </div>
 
                         <div className="Login-form__request">
                             <button className="Login-form__button btn btn-primary">

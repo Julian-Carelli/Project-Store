@@ -1,8 +1,10 @@
-import {POST_USER, GET_USER, DELETE_USER, LOADING, ERROR} from '../constants/registerTypes'
+import {POST_USER, GET_USER, LOADING, ERROR} from '../constants/registerTypes';
+import {DELETE_USER, ONLINE_USER} from '../constants/loginTypes';
 
 
 const INITIAL_STATE = {
     user:{},
+    offline:{}
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -20,9 +22,18 @@ export default (state = INITIAL_STATE, action) => {
             }
         }
 
+        case ONLINE_USER: {
+            return {
+                ...state,
+                user:{...state.offline},
+                offline:{}
+            }
+        }
+
         case DELETE_USER: {
             return {
                 ...state,
+                offline:{...state.user},
                 user:{}
             }
         }

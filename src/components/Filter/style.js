@@ -9,18 +9,14 @@ const FilterStyled = styled.div`
         align-items:flex-start;
         max-width:1250px;
         width:100%;
-        padding: 90px 0px;
-        @media screen and (max-width:1200px) and (min-width:0px){
+        padding: 90px 15px;
+        margin:0px;
+        
+        @media screen and (max-width:768px) and (min-width:0px){
+            padding: 45px 0px;
+        }
+        @media screen and (max-width:1200px){
             align-items:center;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            padding: 45px 0px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            padding: 45px 0px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            padding: 45px 0px;
         }
     }
 
@@ -30,6 +26,7 @@ const FilterStyled = styled.div`
         align-items:center;
         float:left;
         padding:20px;
+        margin:0px;
     }
 
     .Filter__name {
@@ -54,29 +51,17 @@ const FilterStyled = styled.div`
     .Filter__title {
         font-size:${props => props.theme.fontSizeTitle.max};
         font-weight:${props => props.theme.fontWeight.bold};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width:480px) and (min-width: 0px){
             font-size:${props => props.theme.fontSizeTitle.min};
         }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:${props => props.theme.fontSizeTitle.min};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:${props => props.theme.fontSizeTitle.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+        @media screen and (max-width:1024px) and (min-width:480px){
             font-size:${props => props.theme.fontSizeTitle.medium};
         }
     }
 
     .Filter-organizeButton {
         text-align:center;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            display:none;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            display:none;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0){
             display:none;
         }
     }
@@ -111,6 +96,7 @@ const FilterStyled = styled.div`
         padding:20px;
         max-width:500px;
         width:100%;
+        margin:0px;
     }
 
     .Filter__search {

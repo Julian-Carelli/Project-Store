@@ -1,4 +1,5 @@
-import {POST_USER, GET_USER, ERROR, DELETE_USER} from '../constants/registerTypes'
+import {POST_USER, GET_USER, ERROR} from '../constants/registerTypes';
+import {ONLINE_USER, DELETE_USER} from '../constants/loginTypes';
 
 export const postUser = (data) => (dispatch) => {
 
@@ -21,6 +22,21 @@ export const getUser = () => (dispatch) => {
     try {
         dispatch({
             type: GET_USER
+        })
+    }
+
+    catch(error){
+        dispatch({
+            type:ERROR,
+            payload:error.message
+        })
+    }
+}
+
+export const onlineUser = () => (dispatch) => {
+    try {
+        dispatch({
+            type:ONLINE_USER
         })
     }
 

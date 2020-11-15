@@ -20,13 +20,7 @@ const ModalStyled = styled.div `
         padding:20px;
         max-width:350px;
         width:100%;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            width:80%;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            width:80%;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width: 768px) and (min-width:0px){
             width:80%;
         }
     }

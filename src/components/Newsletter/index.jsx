@@ -2,7 +2,7 @@ import React from 'react'
 
 import NewsletterStyled from './style'
 
-const Newsletter = ({handleSubmitSubscribe, notify}) => (
+const Newsletter = ({handleSubmitSubscribe}) => (
     <NewsletterStyled>
         <div className="Newsletter-row">
             <div className="Newsletter-row__name col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">

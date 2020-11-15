@@ -21,13 +21,7 @@ const DeleteProductStyled = styled.div `
     .DeleteProduct__title {
         font-size:${props => props.theme.fontSizeTitle.medium};
         font-weight:${props => props.theme.fontWeight.medium};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0px){
             font-size:${props => props.theme.fontSizeText.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){

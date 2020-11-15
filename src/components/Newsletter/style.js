@@ -7,29 +7,14 @@ const NewsletterStyled = styled.div `
     max-height:100px;
     height:100%;
     background-color:#eeeeee;
-    @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-        padding:90px 0px;
-    }
-    @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-        padding:90px 0px;
-    }
-    @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-        padding:90px 0px;
-    }
-    @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+    @media screen and (max-width:1024px) and (min-width:0px){
         padding:90px 0px;
     }
     .Newsletter-row {
         display:flex;
         justify-content:center;
         padding:90px 0px;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            flex-direction:column;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            flex-direction:column;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0px){
             flex-direction:column;
         }
     }
@@ -41,19 +26,14 @@ const NewsletterStyled = styled.div `
     .Newsletter-row__title {
         font-size:${props => props.theme.fontSizeTitle.min};
         font-weight:${props => props.theme.fontWeight.regular};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+
+        @media screen and (max-width: 480px) and (min-width:0px){
             font-size:${props => props.theme.fontSizeText.min};
         }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:${props => props.theme.fontSizeText.min};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+
+        @media screen and (max-width:1024px) and (min-width:480px){
             font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        
+        }        
         
     }
 
@@ -98,15 +78,7 @@ const NewsletterStyled = styled.div `
     .Newsletter-row__button {
         font-size:${props => props.theme.fontSizeText.min};
         font-weight:${props => props.theme.fontWeight.regular};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            margin-top:20px;
-            width:60%;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            margin-top:20px;
-            width:60%;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0px){
             margin-top:20px;
             width:60%;
         }

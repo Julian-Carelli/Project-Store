@@ -40,9 +40,9 @@ const FormRegister = ({handleOnSubmit, handleOnChange, showPassword, error}) => 
                             <label className="Register-form__label-checkbox">Quieres recibir notificaciones de nuestros productos</label>
                         </div>
                         {error === 'error' && (
-                            <div className="Register-form__error">
-                                <Error classText="Register-form__text text-danger" text="El usuario, las contraseñas y/o el correo electronico no son validos, ingrese nuevamente los datos"/>
-                            </div>
+                        <div className="Register-form__error">
+                            <Error classText="Register-form__text text-danger" text="El usuario, las contraseñas y/o el correo electronico no son validos, ingrese nuevamente los datos"/>
+                        </div>
                         )}
                         <div className="Register-form__request">
                             <button className="Register-form__button btn btn-primary">Registrarse</button>

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 
 import FormLogin from '../components/FormLogin/index';
+import {onlineUser} from '../store/actions/userActions';
 
 
 class Login extends Component {
@@ -28,15 +29,14 @@ class Login extends Component {
 
     }
 
-
-
     userLogin = event => {
         event.preventDefault()
 
-        const user = {...this.props.user}
+        const offline = {...this.props.offline}
 
 
-        if(this.state.data.email === user.email && this.state.data.password === user.password){
+        if(this.state.data.email === offline.email && this.state.data.password === offline.password){
+            this.props.onlineUser()
             return this.props.history.push('/products')
         }
 
@@ -49,7 +49,6 @@ class Login extends Component {
     render(){
         return(
             <FormLogin 
-            data={this.state.data}
             error={this.state.error}
             handleOnChange={this.handleOnChange}
             userLogin={this.userLogin} 
@@ -58,6 +57,13 @@ class Login extends Component {
     }
 }
 
-const mapStateToProps = ({userReducer}) => userReducer
+const mapStateToProps = ({userReducer, productsReducer}) => ({
+   userReducer,
+   productsReducer 
+}) 
 
-export default connect(mapStateToProps)(Login)
+const mapDispatchToProps = {
+    onlineUser
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

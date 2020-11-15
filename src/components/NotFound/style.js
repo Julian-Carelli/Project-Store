@@ -28,16 +28,7 @@ const NotFoundStyled = styled.div `
     .NotFound-Error404__title {
         font-size: ${props => props.theme.fontSizeTitle.max};
         font-weight: ${props => props.theme.fontWeight.bold};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size: ${props => props.theme.fontSizeTitle.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size: ${props => props.theme.fontSizeTitle.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size: ${props => props.theme.fontSizeTitle.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+        @media screen and (max-width: 1024px) and (min-width:0px){
             font-size: ${props => props.theme.fontSizeTitle.medium};
         }
     }

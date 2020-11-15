@@ -1,44 +1,11 @@
 import styled from 'styled-components'
-/* 
-export const ProductsView = styled.div`
-    display:flex;
-    justify-content:center;
-`
-
-export const ProductsView__row = styled.div`
-    margin:auto;
-`
-
-export const Product = styled.div `
-    display:flex;
-    justify-content:center;
-    padding:25px 0px;
-
-`
-
-export const Product_card = styled.div `
-    max-width:300px;
-    width:100%;
-    max-height:450px;
-    height:100%;
-    border-radius:10px;
-    border:1px solid black;
-    padding:40px 0px;
-    -webkit-box-shadow: -2px 11px 23px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: -2px 11px 23px -6px rgba(0,0,0,0.75);
-    box-shadow: -2px 11px 23px -6px rgba(0,0,0,0.75);
-` */
 
 const ProductsViewStyled = styled.div`
-    @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+
+    @media screen and (max-width:768px) and (min-width:0px){
         height:auto;
     }
-    @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-        height:auto;
-    }
-    @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-        height:auto;
-    }
+
     .ProductsView {
         display:flex;
         justify-content:center;
@@ -48,13 +15,7 @@ const ProductsViewStyled = styled.div`
         margin:auto;
         padding:90px 0px;
         width:100%;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            padding:45px 0px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            padding:45px 0px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0px){
             padding:45px 0px;
         }
     }
@@ -64,13 +25,9 @@ const ProductsViewStyled = styled.div`
         justify-content:center;
         padding:20px 20px;
         width:100%;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width:480px) and (min-width:0px){
             padding: 20px 0px;
         }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            padding:20px 0px;
-        }
-
     }
 
     .ProductsView-product__card {
@@ -80,17 +37,11 @@ const ProductsViewStyled = styled.div`
         height:100%;
         border-radius:10px;
         border:1px solid black;
-        padding:40px 0px;
         -webkit-box-shadow: -2px 11px 23px -6px rgba(0,0,0,0.75);
         -moz-box-shadow: -2px 11px 23px -6px rgba(0,0,0,0.75);
         box-shadow: -2px 11px 23px -6px rgba(0,0,0,0.75);
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            width:70%;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            width:70%;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        padding-bottom:20px;
+        @media screen and (max-width:768px) and (min-width:0px){
             width:70%;
         }
     }
@@ -131,21 +82,10 @@ const ProductsViewStyled = styled.div`
     .ProductsView-product__title {
         font-size:${props => props.theme.fontSizeTitle.min};
         font-weight:${props => props.theme.fontWeight.medium};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+        @media screen and (max-width:1024px) and (min-width:0px){
             font-size:${props => props.theme.fontSizeText.medium};
         }
     }
-
-    
 
     .ProductsView-product__text {
         font-size:${props => props.theme.fontSizeText.min};
@@ -158,6 +98,61 @@ const ProductsViewStyled = styled.div`
     }
 
     .ProductsView-product__button {
+        font-size:${props => props.theme.fontSizeText.min};
+        font-weight:${props => props.theme.fontWeight.regular}; 
+    }
+
+    .ProductsView-expected {
+        @media screen and (max-width:1200px) {
+            text-align:center;
+        }
+    }
+
+    .ProductsView-expected__name {
+        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+            font-size:11px;
+        }
+        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
+            font-size:13px;
+        }
+        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+            font-size:13px;
+        }
+        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+            font-size:14px;
+        }
+    }
+
+    .ProductsView-expected__title {
+        font-size:${props => props.theme.fontSizeTitle.min};
+        font-weight:${props => props.theme.fontWeight.medium};
+        @media screen and (max-width: 480px) and (min-width:0px){
+            font-size:${props => props.theme.fontSizeText.medium};
+            text-align:center;
+        }
+
+        @media screen and (max-width:1024px) and (min-width:480px){
+            font-size:${props => props.theme.fontSizeText.medium};
+            text-align:center;
+        } 
+    }
+
+    .ProductsView-expected__info {
+        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+            font-size:11px;
+        }
+        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
+            font-size:13px;
+        }
+        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+            font-size:13px;
+        }
+        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+            font-size:14px;
+        }
+    }
+
+    .ProductsView-expected__text {
         font-size:${props => props.theme.fontSizeText.min};
         font-weight:${props => props.theme.fontWeight.regular}; 
     }

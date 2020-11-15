@@ -10,32 +10,13 @@ const Header = styled.div`
         height:50px;
         padding:10px 20px;
         background-color:#373a40;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            justify-content:space-around;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            justify-content:space-around;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width: 768px) and (min-width:0px){
             justify-content:space-around;
         }
     }
 
     .Navbar-brand {
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            display:flex;
-            align-items:center;
-            font-size:12px;
-            width:50%;
-
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            display:flex;
-            align-items:center;
-            font-size:12px;
-            width:50%;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0px){
             display:flex;
             align-items:center;
             font-size:12px;
@@ -44,35 +25,26 @@ const Header = styled.div`
     }
     
     .Navbar-brand__logo {
-        width:20px;
+        max-width:20px;
+        width:100%;
+        margin-right: 20px;
     }
 
     .Navbar-brand__title {
         color:#ffffff;
         font-size:${props => props.theme.fontSizeText.min};
         font-weight:${props => props.theme.fontWeight.bold};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width:768px) and (min-width:0px){
             display:none;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            display:none;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            display:none;
-        }
-        
+        }        
     }
 
     .Navbar-cart {
         display:flex;
         align-items:center;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width:480px) and (min-width:0px){
             font-size:12px;
-            width:60%;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:12px;
-            width:60%;
+            width:60%; 
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
             font-size:12px;
@@ -87,15 +59,9 @@ const Header = styled.div`
         margin:auto;
         width:120px;
         z-index:900;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width:768px) and (min-width:0px){
             padding:6px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            padding:6px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            padding:6px;
-        }  
+        } 
     }
 
     .Navbar-cart__user {
@@ -105,28 +71,15 @@ const Header = styled.div`
         text-align:center;
         padding:0px;
         margin:0px;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width:768px) and (min-width:0px){
             font-size:12px;
         }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:12px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:12px;
-        }
-        
     }
 
     .Navbar-cart__user:hover .Navbar-cart__link {
         padding:20px 0px;
         display:block;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            padding:20px 0px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            padding:20px 0px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0px){
             padding:20px 0px;
         }
     }
@@ -135,17 +88,8 @@ const Header = styled.div`
         color:#ffffff;
         font-size:${props => props.theme.fontSizeText.min};
         font-weight:${props => props.theme.fontWeight.medium};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width:1024px) and (min-width:0px){
             margin:auto;
-            font-size:${props => props.theme.fontSizeText.min};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            margin:auto;
-            font-size:${props => props.theme.fontSizeText.min};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            margin:auto;
-            font-size:${props => props.theme.fontSizeText.medium};
         }
     }
 
@@ -159,10 +103,7 @@ const Header = styled.div`
     .Navbar-cart__icon {
         padding:0px 30px;
         font-size:${props => props.theme.fontSizeText.medium};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:${props => props.theme.fontSizeText.min};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
+        @media screen and (max-width:480px) and (min-width:0px){
             font-size:${props => props.theme.fontSizeText.min};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
@@ -182,18 +123,10 @@ const Header = styled.div`
         border-radius:50%;
         text-align:center;
         background-color:white;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width:480px) and (min-width:0px){
             font-size:12px;
             width:15px;
             height:15px;
-
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:12px;
-            width:15px;
-            height:15px;
-
-
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
             font-size:12px;

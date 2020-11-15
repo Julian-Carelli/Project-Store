@@ -5,36 +5,19 @@ import slider from '../Figure/slider'
 const LoginStyled = styled.div`
     height:100vh;
     background-color:#eeeeee;
-    @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-        height:100vh;
+    @media screen and (max-width: 1024px) and (min-width:0px){
+        height:auto;
     }
-    @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-        height:100vh;
-    }
-    @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-        height:100%;
-    }
-
     .Login {
         display:flex;
         text-align:start;
         justify-content:center;
         align-items:center;
         padding:0px 90px;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        height:100vh;
+        @media screen and (max-width:768px) and (min-width:0px){
             height:auto;
             padding:0px 20px;
-
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            height:auto;
-            padding:0px 20px;
-
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            height:auto;
-            padding:0px 20px;
-
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
             height:100vh;
@@ -47,29 +30,14 @@ const LoginStyled = styled.div`
         justify-content:space-beetween;
         align-items:center;
         padding:90px 0px;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            flex-direction:column-reverse;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            flex-direction:column-reverse;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width: 768px) and (min-width:0px){
             flex-direction:column-reverse;
         }
     }
 
     .Login-badge {
-        padding-left:20px;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            padding:0px 20px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            padding:0px 20px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            padding:0px 20px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+        padding:0px 20px;
+        @media screen and (max-width:1024px) and (min-width:0px){
             padding:0px 20px;
         }
     }
@@ -93,16 +61,10 @@ const LoginStyled = styled.div`
     .Login-badge__title {
         font-size:${props => props.theme.fontSizeTitle.medium};
         font-weight:${props => props.theme.fontWeight.regular};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width: 480px) and (min-width:0px){
             font-size:${props => props.theme.fontSizeText.medium};
         }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:${props => props.theme.fontSizeTitle.min};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+        @media screen and (max-width: 1024px) and (min-width: 480px){
             font-size:${props => props.theme.fontSizeTitle.min};
         }
     }
@@ -114,13 +76,7 @@ const LoginStyled = styled.div`
         width:100%;
         height:100%;
         border-radius:20px;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            width:80%;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            width:80%;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width: 768px) and (min-width:0px){
             width:80%;
         }
     }
@@ -166,16 +122,10 @@ const LoginStyled = styled.div`
     .Login-form__title {
         font-size:${props => props.theme.fontSizeTitle.max};
         font-weight:${props => props.theme.fontWeight.bold};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
+        @media screen and (max-width:480px) and (min-width:0px){
             font-size:${props => props.theme.fontSizeTitle.min};
         }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:${props => props.theme.fontSizeTitle.min};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:${props => props.theme.fontSizeTitle.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
+        @media screen and (max-width:1024px) and (min-width:480px){
             font-size:${props => props.theme.fontSizeTitle.medium};
         }
     }
@@ -224,6 +174,8 @@ const LoginStyled = styled.div`
     }
 
     .Login-form__error {
+        max-width:600px;
+        width:100%;
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
             font-size:11px;
         }
@@ -241,7 +193,7 @@ const LoginStyled = styled.div`
     .Login-form__text {
         font-size:${props => props.theme.fontSizeText.min};
         font-weight:${props => props.theme.fontWeight.regular};
-        line-height:25px;
+        width:100%;
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
             line-height:15px;
         }

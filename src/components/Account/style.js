@@ -4,14 +4,8 @@ const AccountStyled = styled.div `
     .Account {
         height:100vh;
         padding:90px 0px;
-        background-color:#eeeeee; 
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            height:auto;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            height:auto;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        background-color:#eeeeee;
+        @media screen and (max-width:768px) and (min-width:0px){
             height:auto;
         }
 
@@ -29,10 +23,7 @@ const AccountStyled = styled.div `
         justify-content:center;
         align-items:center;
         padding:45px 0px;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            padding:0px;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
+        @media screen (max-width:480px) and (min-width:0px){
             padding:0px;
         }
     }
@@ -42,13 +33,7 @@ const AccountStyled = styled.div `
         max-width:600px;
         width:100%;
         margin:auto;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            text-align:center;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            text-align:center;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0px){
             text-align:center;
         }
     }
@@ -64,15 +49,7 @@ const AccountStyled = styled.div `
     .Account-product__card {
         display:flex;
         width:100%;
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            align-items:center;
-            flex-direction:column;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            align-items:center;
-            flex-direction:column;
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0px){
             align-items:center;
             flex-direction:column;
         }
@@ -117,13 +94,7 @@ const AccountStyled = styled.div `
     .Account-product__title {
         font-size:${props => props.theme.fontSizeTitle.medium};
         font-weight:${props => props.theme.fontWeight.medium};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0px){
             font-size:${props => props.theme.fontSizeText.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
@@ -173,18 +144,11 @@ const AccountStyled = styled.div `
     .Account-total__title {
         font-size:${props => props.theme.fontSizeTitle.medium};
         font-weight:${props => props.theme.fontWeight.bold};
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:${props => props.theme.fontSizeText.medium};
-        }
-        @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
+        @media screen and (max-width:768px) and (min-width:0px){
             font-size:${props => props.theme.fontSizeText.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
             font-size:${props => props.theme.fontSizeTitle.min};
-
         }
     } 
 
