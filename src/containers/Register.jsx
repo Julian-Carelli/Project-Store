@@ -21,7 +21,9 @@ class Register extends Component {
             },
 
             error: '',
-            notify:''
+            notify:'',
+            messageUsername: '',
+            messagePassword:'',
         }
     }
 
@@ -42,8 +44,37 @@ class Register extends Component {
                 ...this.state.data,
                 [event.target.name]: event.target.value
             },
-            error:''
+            error:'',
         })
+
+        if(event.target.name === 'username'){
+            setTimeout(() => {
+                this.setState({
+                    messageUsername:'message',
+                    messagePassword:'',
+                })
+                setTimeout(() => {
+                    this.setState({
+                        messageUsername:''
+                    })
+                }, 3500)
+            }, 0)
+        }
+        
+        if(event.target.name === 'password'){
+            setTimeout(() => {
+                this.setState({
+                    messagePassword:'message',
+                    messageUsername:'',
+
+                })
+                setTimeout(() => {
+                    this.setState({
+                        messagePassword:'',
+                    })
+                }, 3500)
+            }, 0)
+        }   
     }
 
     handleOnSubmit = event => {
@@ -55,10 +86,11 @@ class Register extends Component {
         let password = this.state.data.password;
 
 
-        if(password === passwordConfirm.value && regExpUser(user.value) && regExpEmail(email.value) ){
+        if(password === passwordConfirm.value && regExpUser(user.value) && regExpEmail(email.value)){
             this.props.postUser(this.state.data)
-            this.props.history.push('/Project-Store/#')
+            this.props.history.push(process.env.PUBLIC_URL + "/home")
         }
+
 
         else {
             this.setState({error:'error'})
@@ -110,6 +142,8 @@ class Register extends Component {
             <FormRegister 
             data={this.state.data}
             error={this.state.error}
+            messagePassword={this.state.messagePassword}
+            messageUsername={this.state.messageUsername}
             handleOnChange={this.handleOnChange} 
             handleOnSubmit={this.handleOnSubmit}
             showPassword={this.showPassword}/>
