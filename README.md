@@ -36,6 +36,6 @@
 
 <p>Lo mas me gusto de este proyecto fue el apartado de estructurarlo, ya que pude conseguir una estructura muy optima y sencilla de entender, donde cada carpeta tiene su propio rol y facil acceso.</p>
 
-Link del proyecto: <a target="_blank" href="https://Julian-Carelli.github.io/project-store">Project-Store</a>
+Link del proyecto: <a target="_blank" href="https://Julian-Carelli.github.io/Project-Store">Project-Store</a>
 
   
