@@ -18,7 +18,7 @@ const FormRegister = ({messagePassword, messageUsername, handleOnSubmit, handleO
                             <input id="user" name="username" onChange={handleOnChange} className="Register-form__input form-control" maxLength="15" required type="text"
                             placeholder="Ingresa un nombre de usuario"></input>
                             {messageUsername && 
-                            <p className="Register-form__text text-warning">Recuerda que esta permitido entre 5 a 15 caracteres, desde numeros a letras</p>
+                            <p className="Register-form__text mt-3 text-warning">Recuerda que esta permitido entre 5 a 15 caracteres, desde numeros a letras</p>
                             }
                         </div>
                         <div className="Register-form__content form-group">
@@ -30,10 +30,10 @@ const FormRegister = ({messagePassword, messageUsername, handleOnSubmit, handleO
                             <label className="Register-form__label">Contraseña</label>
                             <input id="password" name="password" type="password" onChange={handleOnChange}  className="Register-form__input form-control" maxLength="20" required 
                             placeholder="Ingresa una contraseña"></input>
-                            <input type="checkbox" id="checkbox" onClick={() => showPassword()}className="Register-from__checkbo form-group"></input>
+                            <input type="checkbox" id="checkbox" onClick={() => showPassword()}className="Register-from__checkbox form-group"></input>
                             <label className="Register-form__label-checkbox">Mostrar contraseña</label>
                             {messagePassword && 
-                            <p className="Register-form__text text-warning">Recuerda que esta permitido 20 caracteres como maximo, desde numeros a letras</p>
+                            <p className="Register-form__text  text-warning">Recuerda que esta permitido 20 caracteres como maximo, desde numeros a letras</p>
                             }
                         </div>
                         <div className="Register-form__content form-group ">
