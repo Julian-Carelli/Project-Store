@@ -57,7 +57,7 @@ class Register extends Component {
 
         if(password === passwordConfirm.value && regExpUser(user.value) && regExpEmail(email.value) ){
             this.props.postUser(this.state.data)
-            this.props.history.push('/#')
+            this.props.history.push('/project-store')
         }
 
         else {
