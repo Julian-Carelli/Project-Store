@@ -21,9 +21,9 @@ class Home extends Component {
 
     userCreated = (user) => {
         if(user.username){
-            return this.props.history.push('/products')
+            return this.props.history.push('/Project-Store/products')
         }
-        this.props.history.push('/register')
+        this.props.history.push('/Project-Store/register')
     }
     
 

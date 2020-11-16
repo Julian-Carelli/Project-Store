@@ -4,7 +4,7 @@ import OrganizeButton from '../OrganizeButton/index'
 
 import FilterStyled from './style'
 
-const Filter = ({user,filter, handleFilterButton, handleFilterAll, handleFilterSearch}) => (
+const Filter = ({user, handleFilterButton, handleFilterAll, handleFilterSearch}) => (
     (user.email
             ?  <FilterStyled>
                     <div className="Filter container-fluid">

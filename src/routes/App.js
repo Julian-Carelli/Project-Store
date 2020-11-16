@@ -18,11 +18,11 @@ const App = () => (
         <ThemeProvider theme={theme}>
             <Layout>
                 <Switch>
-                    <Route exact path="/project-store" component={Home}></Route>
-                    <Route exact path="/products" component={Products}></Route>
-                    <Route exact path="/cart" component={Cart}></Route>
-                    <Route exact path="/register" component={Register}></Route>
-                    <Route exact path="/login" component={Login}></Route>
+                    <Route exact path={"/Project-Store/#"} component={Home}></Route>
+                    <Route exact path={"/Project-Store/products"} component={Products}></Route>
+                    <Route exact path={"/Project-Store/cart"} component={Cart}></Route>
+                    <Route exact path={"/Project-Store/register"} component={Register}></Route>
+                    <Route exact path={"/Project-Store/login"} component={Login}></Route>
                     <Route exact component={NotFound}></Route>
                 </Switch>
             </Layout>

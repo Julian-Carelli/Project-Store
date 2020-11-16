@@ -27,7 +27,7 @@ class Cart extends Component {
 
     handleConfirmBuy = () => {
         this.props.confirmBuy()
-        this.props.history.push('/project-store')
+        this.props.history.push('/Project-Store/#')
     }
 
     handleOnOpenModal = e => {

@@ -36,7 +36,7 @@ class Login extends Component {
 
         if(this.state.data.email === offline.email && this.state.data.password === offline.password){
             this.props.onlineUser()
-            return this.props.history.push('/products')
+            return this.props.history.push('/Project-Store/products')
         }
 
         else {

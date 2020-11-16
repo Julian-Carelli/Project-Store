@@ -21,12 +21,12 @@ const Redirection = ({text}) => (
                     </div>
                     <div className="Redirection-main__links">
                         <div className="Redirection-main__login">
-                            <Link to="/login">
+                            <Link to="/Project-Store/login">
                                 <p className="Redirection-main__text">Iniciar sesión</p>
                             </Link>
                         </div>
                         <div className="Redirection-main__register">
-                            <Link to="/register">
+                            <Link to="/Project-Store/register">
                                 <p className="Redirection-main__text">Crear cuenta</p>
                             </Link>
                         </div>

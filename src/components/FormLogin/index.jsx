@@ -50,7 +50,7 @@ const FormLogin = ({error, handleOnChange, userLogin}) => (
                     </form>
                     <div className="Login-form__links">
                         <div className="Login-form__createAccount">
-                            <Link to="/register">
+                            <Link to="/Project-Store/register">
                                 <p className="Login-form__register">Crear cuenta</p>
                             </Link>
                         </div>

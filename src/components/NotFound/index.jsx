@@ -19,7 +19,7 @@ const NotFound = () => (
                         </p>
                     </div>
                     <div className="NotFound-Error404__link">
-                        <Link to="/project-store">
+                        <Link to={'/Project-Store/#'}>
                                 <p className="NotFound-Error404__redirection">
                                     Volver al Home
                                 </p>

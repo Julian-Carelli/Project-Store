@@ -19,7 +19,7 @@ class Navbar extends Component{
             <Header>
                 <div className="Navbar__content">
                     <div className="Navbar-brand">
-                        <Link to="/project-store">
+                        <Link to={'/Project-Store/#'}>
                             <img src={Logo} className="Navbar-brand__logo" alt="Logo de Project Store"></img>
                         </Link>
                         <span className="Navbar-brand__title">Project Store</span>
@@ -39,7 +39,7 @@ class Navbar extends Component{
                                         ?   
 
                                             <li className="Navbar-cart__login">
-                                                <Link to="/login">
+                                                <Link to="/Project-Store/login">
                                                     <p className="Navbar-cart__span" onClick={() => this.signOut()}>
                                                         Cerrar sesión
                                                     </p>
@@ -48,8 +48,8 @@ class Navbar extends Component{
                                         
                                         :   
                                             <>
-                                            <li className="Navbar-cart__login"><Link to="/login"><p className="Navbar-cart__span">Iniciar sesión</p></Link></li>
-                                            <li className="Navbar-cart__register"><Link to="/register"><p className="Navbar-cart__span">Registrarse</p></Link></li>
+                                            <li className="Navbar-cart__login"><Link to="/Project-Store/login"><p className="Navbar-cart__span">Iniciar sesión</p></Link></li>
+                                            <li className="Navbar-cart__register"><Link to="/Project-Store/register"><p className="Navbar-cart__span">Registrarse</p></Link></li>
                                             </>
                                     }
                                     
@@ -57,7 +57,7 @@ class Navbar extends Component{
                                 </ul>
                             </li>
                         </ul>
-                        <Link to="/cart">
+                        <Link to="/Project-Store/cart">
                             <i className="Navbar-cart__icon fas fa-shopping-cart"></i>
                         </Link>
                         {this.props.userReducer.user.email && (
