@@ -18,7 +18,7 @@ const App = () => (
         <ThemeProvider theme={theme}>
             <Layout>
                 <Switch>
-                    <Route exact path="/" component={Home}></Route>
+                    <Route exact path="/#" component={Home}></Route>
                     <Route exact path="/products" component={Products}></Route>
                     <Route exact path="/cart" component={Cart}></Route>
                     <Route exact path="/register" component={Register}></Route>

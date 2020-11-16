@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 
 import Newsletter from '../components/Newsletter/index';
 import FormRegister from '../components/FormRegister/index';
+import Notify from '../components/Notify/index';
 import {postUser} from '../store/actions/userActions';
 import {regExpUser, regExpEmail} from '../utils/regExp';
 
@@ -56,7 +57,7 @@ class Register extends Component {
 
         if(password === passwordConfirm.value && regExpUser(user.value) && regExpEmail(email.value) ){
             this.props.postUser(this.state.data)
-            this.props.history.push('/')
+            this.props.history.push('/#')
         }
 
         else {
@@ -69,10 +70,20 @@ class Register extends Component {
         let subscribe = document.getElementById('subscribe');
         if(regExpEmail(subscribe.value)){
             subscribe.value = '';
+            setTimeout(() => {
+                this.setState({notify:'load'})
+                setTimeout(() => {
+                    this.setState({notify:''})
+                }, 3500)
+            }, 0)
         }
         else {
-            this.setState({notify:'error'})
-
+            setTimeout(() => {
+                this.setState({notify:'error'})
+                setTimeout(() => {
+                    this.setState({notify:''})
+                }, 3500)
+            }, 0)
         }
     }
 
@@ -84,6 +95,18 @@ class Register extends Component {
             handleSubmitSubscribe={this.handleSubmitSubscribe}
             notify={this.state.notify}
             />
+            {this.state.notify === 'load' &&
+                <Notify
+                classText="text-success"
+                text="Tu solicitud se ha enviado con exito"
+                />
+            }
+            {this.state.notify === 'error' &&
+                <Notify
+                classText="text-danger"
+                text="Correo electronico invalido, porfavor ingrese otro nuevamente"
+                />
+            }
             <FormRegister 
             data={this.state.data}
             error={this.state.error}

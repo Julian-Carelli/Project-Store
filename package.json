@@ -2,9 +2,7 @@
   "name": "project-store",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://github.com/Julian-Carelli/Project-Store",
-  "predeploy":"npm run build",
-  "deploy": "gh-pages -d build",
+  "homepage": "https://Julian-Carelli.github.io/Project-Store/#",
   "dependencies": {
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.3",
@@ -19,6 +17,8 @@
     "styled-components": "^5.2.0"
   },
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

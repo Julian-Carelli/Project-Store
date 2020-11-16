@@ -1,3 +1,5 @@
+import {FILTER_PRODUCTS} from '../constants/productsTypes'
+
 import coat1 from '../../assets/images/coat/coat1.jpg';
 import coat2 from '../../assets/images/coat/coat2.jpg';
 import coat3 from '../../assets/images/coat/coat3.jpg';
@@ -154,7 +156,7 @@ const INITIAL_STATE = {
 export default (state=INITIAL_STATE, action) => {
     switch(action.type){
 
-        case 'FILTER_PRODUCTS':{
+        case FILTER_PRODUCTS:{
             return {
                 ...state,
                 products:[...state.products.filter(item => item.type === action.payload)]
