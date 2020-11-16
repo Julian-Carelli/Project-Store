@@ -44,7 +44,7 @@ const ProductsView = ({user, products, handleAddToCart}) => (
                                     </div>
                                     <div className="ProductsView-expected__info">
                                         <p className="ProductsView-expected__text">
-                                        Recuerda usar las palabras claves como <strong> t-shirt</strong>, <strong>shoes</strong> y <strong>coat</strong> para obtener los resultados que buscas
+                                        Recuerda usar las palabras claves como <strong> remeras</strong>, <strong>zapatillas</strong> y <strong>abrigos</strong> para obtener los resultados que buscas
                                         </p>
                                     </div>
                                 </div>

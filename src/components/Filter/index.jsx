@@ -4,7 +4,7 @@ import OrganizeButton from '../OrganizeButton/index'
 
 import FilterStyled from './style'
 
-const Filter = ({user,filter, handleFilterButton, handleFilterAll, handleFilterSearch}) => (
+const Filter = ({user, handleFilterButton, handleFilterAll, handleFilterSearch}) => (
     (user.email
             ?  <FilterStyled>
                     <div className="Filter container-fluid">
@@ -45,8 +45,7 @@ const Filter = ({user,filter, handleFilterButton, handleFilterAll, handleFilterS
                         </div>
                         <div className="Filter__filter row">
                             <div className="Filter__search col-12">
-                                <input onChange={handleFilterSearch} value={filter} className="Filter__input form-group" placeholder="Buscar por categoria ejemplo 
-                                'remeras', 'zapatillas', 'abrigos'"></input>
+                                <input onChange={handleFilterSearch} className="Filter__input form-group" placeholder="buscar por 'remeras', 'zapatillas', 'abrigos'"></input>
                             </div>
                         </div>
                     </div>

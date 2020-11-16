@@ -1,15 +1,10 @@
-
+import {FILTER_PRODUCTS} from '../constants/productsTypes'
 
 export const filterProducts = (type) => (dispatch) => {
 
     dispatch({
-        type: 'FILTER_PRODUCTS',
+        type: FILTER_PRODUCTS,
         payload:type
     })
 }
 
-export const addProducts = () => (dispatch) => {
-    dispatch({
-        type:'ADD_PRODUCTS'
-    })
-}

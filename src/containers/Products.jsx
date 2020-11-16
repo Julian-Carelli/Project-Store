@@ -46,7 +46,7 @@ class Products extends Component {
         const productsInmutable = [...this.props.productsReducer.products]
 
         await this.setState({
-            filter:event.target.value
+            filter:event.target.value.toLowerCase()
         })
 
         const filterProducts = productsInmutable.filter(
@@ -72,7 +72,6 @@ class Products extends Component {
             <>
             <Filter 
             user={this.props.userReducer.user}
-            filter={this.state.filter}
             handleFilterAll={this.handleFilterAll}
             handleFilterButton={this.handleFilterButton}
             handleFilterSearch={this.handleFilterSearch}

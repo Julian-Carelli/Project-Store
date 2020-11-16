@@ -27,7 +27,7 @@ class Cart extends Component {
 
     handleConfirmBuy = () => {
         this.props.confirmBuy()
-        this.props.history.push('/')
+        this.props.history.push(process.env.PUBLIC_URL + "/home")
     }
 
     handleOnOpenModal = e => {

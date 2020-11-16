@@ -1,8 +1,12 @@
 {
   "name": "project-store",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+<<<<<<< HEAD
   "homepage":"https://Julian-Carelli.github.io/Project-Store",
+=======
+  "homepage": "https://Julian-Carelli.github.io/Project-Store/home",
+>>>>>>> structure
   "dependencies": {
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.3",

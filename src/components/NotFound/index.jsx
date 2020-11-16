@@ -19,7 +19,7 @@ const NotFound = () => (
                         </p>
                     </div>
                     <div className="NotFound-Error404__link">
-                        <Link to="/">
+                        <Link to={process.env.PUBLIC_URL + "/home"}>
                                 <p className="NotFound-Error404__redirection">
                                     Volver al Home
                                 </p>

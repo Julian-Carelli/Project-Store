@@ -84,7 +84,8 @@ const FilterStyled = styled.div`
 
     .Filter-organizeButton__button {
         max-width:100px;
-        width:100%;
+        width:auto;
+        padding:6px 20px;
         font-size:${props => props.theme.fontSizeText.min};
     }
 

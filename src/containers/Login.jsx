@@ -32,12 +32,11 @@ class Login extends Component {
     userLogin = event => {
         event.preventDefault()
 
-        const offline = {...this.props.offline}
-
+        const offline = {...this.props.userReducer.offline}
 
         if(this.state.data.email === offline.email && this.state.data.password === offline.password){
             this.props.onlineUser()
-            return this.props.history.push('/products')
+            return this.props.history.push(process.env.PUBLIC_URL + "/products")
         }
 
         else {

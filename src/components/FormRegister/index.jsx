@@ -4,7 +4,7 @@ import Error from '../Error/index'
 
 import FormRegisterStyled from './style'
 
-const FormRegister = ({handleOnSubmit, handleOnChange, showPassword, error}) => (
+const FormRegister = ({messagePassword, messageUsername, handleOnSubmit, handleOnChange, showPassword, error}) => (
     <FormRegisterStyled>
         <div className="Register container-fluid">
             <div className="Register__row row">
@@ -17,6 +17,9 @@ const FormRegister = ({handleOnSubmit, handleOnChange, showPassword, error}) => 
                             <label className="Register-form__label">Nombre de usuario</label>
                             <input id="user" name="username" onChange={handleOnChange} className="Register-form__input form-control" maxLength="15" required type="text"
                             placeholder="Ingresa un nombre de usuario"></input>
+                            {messageUsername && 
+                            <p className="Register-form__text text-warning">Recuerda que esta permitido entre 5 a 15 caracteres, desde numeros a letras</p>
+                            }
                         </div>
                         <div className="Register-form__content form-group">
                             <label className="Register-form__label">Correo electronico</label>
@@ -25,10 +28,13 @@ const FormRegister = ({handleOnSubmit, handleOnChange, showPassword, error}) => 
                         </div>
                         <div className="Register-form__content form-group ">
                             <label className="Register-form__label">Contraseña</label>
-                            <input id="password" name="password" type="password" onChange={handleOnChange}  className="Register-form__input form-control" required 
+                            <input id="password" name="password" type="password" onChange={handleOnChange}  className="Register-form__input form-control" maxLength="20" required 
                             placeholder="Ingresa una contraseña"></input>
                             <input type="checkbox" id="checkbox" onClick={() => showPassword()}className="Register-from__checkbo form-group"></input>
                             <label className="Register-form__label-checkbox">Mostrar contraseña</label>
+                            {messagePassword && 
+                            <p className="Register-form__text text-warning">Recuerda que esta permitido 20 caracteres como maximo, desde numeros a letras</p>
+                            }
                         </div>
                         <div className="Register-form__content form-group ">
                             <label className="Register-form__label">Repetir Contraseña</label>
