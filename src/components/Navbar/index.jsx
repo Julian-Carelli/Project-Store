@@ -19,7 +19,7 @@ class Navbar extends Component{
             <Header>
                 <div className="Navbar__content">
                     <div className="Navbar-brand">
-                        <Link to={process.env.PUBLIC_URL + "/home"}>
+                        <Link to={process.env.PUBLIC_URL}>
                             <img src={Logo} className="Navbar-brand__logo" alt="Logo de Project Store"></img>
                         </Link>
                         <span className="Navbar-brand__title">Project Store</span>

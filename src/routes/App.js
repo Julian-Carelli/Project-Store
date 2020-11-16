@@ -18,7 +18,7 @@ const App = () => (
         <ThemeProvider theme={theme}>
             <Layout>
                 <Switch>
-                    <Route exact path={process.env.PUBLIC_URL + "/home"} component={Home}></Route>
+                    <Route exact path={process.env.PUBLIC_URL} component={Home}></Route>
                     <Route exact path={process.env.PUBLIC_URL + "/products"} component={Products}></Route>
                     <Route exact path={process.env.PUBLIC_URL + "/cart"} component={Cart}></Route>
                     <Route exact path={process.env.PUBLIC_URL + "/register"} component={Register}></Route>

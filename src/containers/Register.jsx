@@ -48,7 +48,7 @@ class Register extends Component {
         })
 
         if(event.target.name === 'username'){
-            setTimeout(() => {
+            const timer = setTimeout(() => {
                 this.setState({
                     messageUsername:'message',
                     messagePassword:'',
@@ -59,10 +59,12 @@ class Register extends Component {
                     })
                 }, 3500)
             }, 0)
+
+            return () => setTimeout(timer)
         }
         
         if(event.target.name === 'password'){
-            setTimeout(() => {
+            const timer = setTimeout(() => {
                 this.setState({
                     messagePassword:'message',
                     messageUsername:'',
@@ -74,6 +76,8 @@ class Register extends Component {
                     })
                 }, 3500)
             }, 0)
+
+            return () => setTimeout(timer)
         }   
     }
 
@@ -88,7 +92,7 @@ class Register extends Component {
 
         if(password === passwordConfirm.value && regExpUser(user.value) && regExpEmail(email.value)){
             this.props.postUser(this.state.data)
-            this.props.history.push(process.env.PUBLIC_URL + "/home")
+            this.props.history.push(process.env.PUBLIC_URL)
         }
 
 
@@ -102,20 +106,24 @@ class Register extends Component {
         let subscribe = document.getElementById('subscribe');
         if(regExpEmail(subscribe.value)){
             subscribe.value = '';
-            setTimeout(() => {
+            const timer = setTimeout(() => {
                 this.setState({notify:'load'})
                 setTimeout(() => {
                     this.setState({notify:''})
                 }, 3500)
             }, 0)
+            return () => setTimeout(timer)
+
         }
         else {
-            setTimeout(() => {
+            const timer = setTimeout(() => {
                 this.setState({notify:'error'})
                 setTimeout(() => {
                     this.setState({notify:''})
                 }, 3500)
             }, 0)
+
+            return () => setTimeout(timer)
         }
     }
 

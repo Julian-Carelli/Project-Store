@@ -92,7 +92,7 @@ const INITIAL_STATE = {
             description: "Lorem ipsum dolor sit amet, sir le pasiui moshle",
             price:1999,
             img:shoes5,
-            type:'abrigos'
+            type:'zapatillas'
         },
         {
             id:10,
@@ -132,7 +132,7 @@ const INITIAL_STATE = {
             description: "Lorem ipsum dolor sit amet, sir le pasiui moshle",
             price:1999,
             img:coat3,
-            type:'remeras'
+            type:'abrigos'
         },
         {
             id:15,
