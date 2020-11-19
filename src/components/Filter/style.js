@@ -9,8 +9,9 @@ const FilterStyled = styled.div`
         align-items:flex-start;
         max-width:1250px;
         width:100%;
-        padding: 90px 15px;
+        padding:90px 15px;
         margin:0px;
+        background-color:#eeeeee;
         
         @media screen and (max-width:768px) and (min-width:0px){
             padding: 45px 0px;
@@ -34,16 +35,16 @@ const FilterStyled = styled.div`
         max-width:500px;
         width:100%;
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:15px;
+            font-size:${props => props.theme.fontSizePx.medium_2};
         }
         
     }
@@ -68,16 +69,16 @@ const FilterStyled = styled.div`
 
     .Filter-organizeButton__contain {
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:11px;
+            font-size:${props => props.theme.fontSizePx.min_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
 
     }
@@ -103,16 +104,16 @@ const FilterStyled = styled.div`
     .Filter__search {
         width:100%;
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:11px;
+            font-size:${props => props.theme.fontSizePx.min_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
     }
 

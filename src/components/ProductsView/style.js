@@ -9,6 +9,7 @@ const ProductsViewStyled = styled.div`
     .ProductsView {
         display:flex;
         justify-content:center;
+        background-color:#eeeeee;
     }
 
     .ProductsView__row {
@@ -23,8 +24,9 @@ const ProductsViewStyled = styled.div`
     .ProductsView-product {
         display:flex;
         justify-content:center;
-        padding:20px 20px;
+        padding:40px 20px;
         width:100%;
+        height:750px;
         @media screen and (max-width:480px) and (min-width:0px){
             padding: 20px 0px;
         }
@@ -36,19 +38,17 @@ const ProductsViewStyled = styled.div`
         max-height:450px;
         height:100%;
         border-radius:10px;
-        border:1px solid black;
         -webkit-box-shadow: -2px 11px 23px -6px rgba(0,0,0,0.75);
         -moz-box-shadow: -2px 11px 23px -6px rgba(0,0,0,0.75);
         box-shadow: -2px 11px 23px -6px rgba(0,0,0,0.75);
-        padding-bottom:20px;
         @media screen and (max-width:768px) and (min-width:0px){
-            width:70%;
+            width:90%;
         }
     }
 
     .ProductsView-product__background {
         width:100%;
-        height:60%;
+        height:100%;
     }
 
     .ProductsView-product__img {
@@ -61,21 +61,21 @@ const ProductsViewStyled = styled.div`
         width:100%;
         height:auto;
         text-align:left;
-        padding:10px 15px;
+        padding:20px 15px;
     }
 
     .ProductsView-product__content {
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:15px;
+            font-size:${props => props.theme.fontSizePx.medium_2};
         }
     }
 
@@ -110,16 +110,16 @@ const ProductsViewStyled = styled.div`
 
     .ProductsView-expected__name {
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:11px;
+            font-size:${props => props.theme.fontSizePx.min_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
     }
 
@@ -139,16 +139,16 @@ const ProductsViewStyled = styled.div`
 
     .ProductsView-expected__info {
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:11px;
+            font-size:${props => props.theme.fontSizePx.min_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
     }
 

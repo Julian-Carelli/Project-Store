@@ -65,16 +65,16 @@ const PresentationStyled = styled.div `
     .Presentation-row__name {
         text-align:start;
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-                font-size:14px;
+                font-size:${props => props.theme.fontSizePx.medium_1};
             }
             @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-                font-size:15px;
+                font-size:${props => props.theme.fontSizePx.medium_2};
             }
         }
         .Presentation-row__title {
@@ -95,16 +95,16 @@ const PresentationStyled = styled.div `
         .Presentation-row__info {
             text-align:start;
             @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-                font-size:11px;
+                font-size:${props => props.theme.fontSizePx.min_1};
             }
             @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-                font-size:12px;
+                font-size:${props => props.theme.fontSizePx.min_2};
             }
             @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-                font-size:13px;
+                font-size:${props => props.theme.fontSizePx.medium};
             }
             @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-                font-size:14px;
+                font-size:${props => props.theme.fontSizePx.medium_1};
             }
         }
         .Presentation-row__text {
@@ -118,16 +118,16 @@ const PresentationStyled = styled.div `
         .Presentation-row__link {
             text-align:start;
             @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-                font-size:11px;
+                font-size:${props => props.theme.fontSizePx.min_1};
             }
             @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-                font-size:13px;
+                font-size:${props => props.theme.fontSizePx.medium};
             }
             @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-                font-size:13px;
+                font-size:${props => props.theme.fontSizePx.medium};
             }
             @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-                font-size:14px;
+                font-size:${props => props.theme.fontSizePx.medium_1};
             }
 
         }

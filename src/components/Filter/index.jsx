@@ -45,7 +45,7 @@ const Filter = ({user, handleFilterButton, handleFilterAll, handleFilterSearch})
                         </div>
                         <div className="Filter__filter row">
                             <div className="Filter__search col-12">
-                                <input onChange={handleFilterSearch} className="Filter__input form-group" placeholder="buscar por 'remeras', 'zapatillas', 'abrigos'"></input>
+                                <input onChange={handleFilterSearch} className="Filter__input form-group" placeholder="Buscar por 'remeras', 'zapatillas', 'abrigos'"></input>
                             </div>
                         </div>
                     </div>
