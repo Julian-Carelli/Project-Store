@@ -95,7 +95,6 @@ class Register extends Component {
             this.props.history.push(process.env.PUBLIC_URL)
         }
 
-
         else {
             this.setState({error:'error'})
         }

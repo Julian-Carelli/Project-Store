@@ -22,16 +22,16 @@ const FormRegisterStyled = styled.div `
     .Register-form__name {
         padding: 20px 0px;
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:15px;
+            font-size:${props => props.theme.fontSizePx.medium_2};
         }
     }
 
@@ -50,16 +50,16 @@ const FormRegisterStyled = styled.div `
         max-width:800px;
         width:100%;
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:11px;
+            font-size:${props => props.theme.fontSizePx.min_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
     }
 
@@ -82,36 +82,38 @@ const FormRegisterStyled = styled.div `
         padding:20px 0px;
         line-height:18px;
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:11px;
+            font-size:${props => props.theme.fontSizePx.min_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
     }
 
     .Register-form__error {
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:11px;
+            font-size:${props => props.theme.fontSizePx.min_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
 
     }
 
     .Register-form__text {
+        transition: all 1s ease;
+        color:#373a40;
         font-size:${props => props.theme.fontSizeText.min};
         font-weight:${props => props.theme.fontWeight.regular};
         line-height:25px;
@@ -125,16 +127,16 @@ const FormRegisterStyled = styled.div `
 
     .Register-form__request {
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_min}) and (min-width:0px){
-            font-size:11px;
+            font-size:${props => props.theme.fontSizePx.min_1};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.phone_max}) and (min-width:${props => props.theme.mediaQueries.phone_min}){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:13px;
+            font-size:${props => props.theme.fontSizePx.medium};
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.desktop}) and (min-width:${props => props.theme.mediaQueries.tablet}){
-            font-size:14px;
+            font-size:${props => props.theme.fontSizePx.medium_1};
         }
     }
 

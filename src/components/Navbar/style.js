@@ -19,7 +19,7 @@ const Header = styled.div`
         @media screen and (max-width:768px) and (min-width:0px){
             display:flex;
             align-items:center;
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
             width:50%;
         }
     }
@@ -43,11 +43,11 @@ const Header = styled.div`
         display:flex;
         align-items:center;
         @media screen and (max-width:480px) and (min-width:0px){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
             width:60%; 
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
             width:50%;
         }
     }
@@ -72,7 +72,7 @@ const Header = styled.div`
         padding:0px;
         margin:0px;
         @media screen and (max-width:768px) and (min-width:0px){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
         }
     }
 
@@ -123,13 +123,18 @@ const Header = styled.div`
         border-radius:50%;
         text-align:center;
         background-color:white;
-        @media screen and (max-width:480px) and (min-width:0px){
-            font-size:12px;
-            width:15px;
-            height:15px;
+        @media screen and (max-width:320px) and (min-width:0px){
+            font-size:${props => props.theme.fontSizePx.min_2};
+            width:35px;
+            height:20px;
+        }
+        @media screen and (max-width:480px) and (min-width:320px){
+            font-size:${props => props.theme.fontSizePx.min_2};
+            width:25px;
+            height:20px;
         }
         @media screen and (max-width:${props => props.theme.mediaQueries.tablet}) and (min-width:${props => props.theme.mediaQueries.phone_max}){
-            font-size:12px;
+            font-size:${props => props.theme.fontSizePx.min_2};
             width:20px;
             height:20px;
         }
