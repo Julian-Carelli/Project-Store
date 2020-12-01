@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 const FilterStyled = styled.div`
-    
+    background-color:#eeeeee;
+
     .Filter {
         display:flex;
         justify-content:center;

@@ -1,15 +1,13 @@
 import styled from 'styled-components'
 
 const ProductsViewStyled = styled.div`
-
-    @media screen and (max-width:768px) and (min-width:0px){
-        height:auto;
-    }
+    background-color:#eeeeee;
 
     .ProductsView {
         display:flex;
         justify-content:center;
-        background-color:#eeeeee;
+        height:100%; 
+
     }
 
     .ProductsView__row {
@@ -103,6 +101,7 @@ const ProductsViewStyled = styled.div`
     }
 
     .ProductsView-expected {
+        height:100vh;
         @media screen and (max-width:1200px) {
             text-align:center;
         }
